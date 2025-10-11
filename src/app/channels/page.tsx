@@ -201,12 +201,12 @@ export default function ChannelsPage() {
             <div className="space-y-4">
               <div className="p-4 bg-gray-50 rounded-lg">
                 <h3 className="font-semibold mb-2">무선 이어폰 대본</h3>
-                <AudioPlayer src="/audio/earphone-sample.mp3" />
+                <AudioPlayer src="/audio/earphone-sample.mp3" title="무선 이어폰 대본" />
               </div>
               
               <div className="p-4 bg-gray-50 rounded-lg">
                 <h3 className="font-semibold mb-2">스마트 워치 대본</h3>
-                <AudioPlayer src="/audio/watch-sample.mp3" />
+                <AudioPlayer src="/audio/watch-sample.mp3" title="스마트 워치 대본" />
               </div>
             </div>
           </Card>
