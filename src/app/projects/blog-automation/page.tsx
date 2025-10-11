@@ -80,7 +80,7 @@ export default function BlogAutomationPage() {
           <div className="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-shadow">
             <h3 className="text-xl font-bold mb-3 text-sky-600">시즌별 여행지 자동 선정</h3>
             <p className="text-gray-600">
-              월별 최적 여행지 데이터베이스(KOSPI, KOSDAQ, 유럽, 동남아 등) 구축.
+              월별 최적 여행지 데이터베이스(일본, 태국, 유럽, 동남아 등) 구축.
               현재 월 기준 다음 1-2개월 여행지 자동 선택.
             </p>
           </div>
