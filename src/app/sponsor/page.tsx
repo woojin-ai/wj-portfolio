@@ -125,7 +125,7 @@ export default function SponsorPage() {
                 공정거래위원회 및 유튜브 정책에 따라 <strong>모든 협찬 콘텐츠는 유료광고임을 명확히 표기</strong>합니다.
               </p>
               <ul className="space-y-2 text-gray-700">
-                <li>• 영상 도입부: "본 영상은 [브랜드]로부터 제품을 협찬받아 제작되었습니다"</li>
+                <li>• 영상 도입부: &quot;본 영상은 [브랜드]로부터 제품을 협찬받아 제작되었습니다&quot;</li>
                 <li>• 썸네일: [협찬] 또는 [AD] 표기</li>
                 <li>• 유튜브 설명란: 협찬 고지 문구 삽입</li>
                 <li>• 유튜브 유료 프로모션 기능 활성화</li>
