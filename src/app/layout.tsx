@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description: 'AI로 효율과 수익을 설계하는 플래너. AI-어시스트 개발로 자동화·콘텐츠 운영을 시스템화합니다.',
   verification: {
     google: '_YX3kbSeZq2clAsi9usIngHj7Q_4ScH4ywFCIpREnvQ',
+    other: {
+      'naver-site-verification': 'd4f7dda7e3890c8585764f14247eabc6b5e7168f',
+    },
   },
   openGraph: {
     title: 'WJ - AI 플래너 & 개발자',
