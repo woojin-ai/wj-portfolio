@@ -5,8 +5,8 @@ import Badge from '@/components/Badge';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Projects - 이우진',
-  description: 'AI를 활용한 자동화 프로젝트: 비트코인 자동매매, 블로그 자동화, 주식 트레이딩 봇',
+  title: 'Projects - WJ',
+  description: 'AI를 활용한 자동화 프로젝트: 비트코인 자동매매, 블로그 자동화, MBTI 테스트, 주식 트레이딩 봇',
 };
 
 export default function ProjectsPage() {
@@ -17,6 +17,7 @@ export default function ProjectsPage() {
       status: '운영중',
       link: '/projects/bitcoin-bot',
       badge: 'success',
+      icon: '₿',
     },
     {
       title: '블로그 자동화 시스템',
@@ -24,6 +25,16 @@ export default function ProjectsPage() {
       status: '운영중',
       link: '/projects/blog-automation',
       badge: 'success',
+      icon: '📝',
+    },
+    {
+      title: 'MBTI 성격유형 테스트',
+      description: '16가지 성격 유형 분석 웹 애플리케이션. Next.js 기반 반응형 웹사이트로 실시간 테스트 가능.',
+      status: '운영중',
+      link: 'https://16personality-type-test.vercel.app/',
+      badge: 'success',
+      icon: '🧠',
+      external: true,
     },
     {
       title: '주식 트레이딩 봇',
@@ -31,6 +42,7 @@ export default function ProjectsPage() {
       status: '진행중',
       link: '/projects/stock-bot',
       badge: 'warning',
+      icon: '📈',
     },
   ];
 
@@ -43,20 +55,46 @@ export default function ProjectsPage() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <Link key={project.title} href={project.link}>
-            <Card>
-              <div className="mb-3">
-                <Badge variant={project.badge as 'success' | 'warning'}>
-                  {project.status}
-                </Badge>
-              </div>
-              <h2 className="mb-3 text-xl font-bold">{project.title}</h2>
-              <p className="text-gray-600">{project.description}</p>
-              <p className="mt-4 text-sm font-medium text-primary">
-                자세히 보기 →
-              </p>
-            </Card>
-          </Link>
+          <div key={project.title}>
+            {project.external ? (
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <Card className="h-full hover:shadow-lg transition-all cursor-pointer">
+                  <div className="mb-3 flex items-center justify-between">
+                    <Badge variant={project.badge as 'success' | 'warning'}>
+                      {project.status}
+                    </Badge>
+                    <span className="text-2xl">{project.icon}</span>
+                  </div>
+                  <h2 className="mb-3 text-xl font-bold">{project.title}</h2>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <p className="mt-4 text-sm font-medium text-sky-600 flex items-center gap-1">
+                    웹사이트 방문하기 🔗
+                  </p>
+                </Card>
+              </a>
+            ) : (
+              <Link href={project.link} className="block h-full">
+                <Card className="h-full hover:shadow-lg transition-all cursor-pointer">
+                  <div className="mb-3 flex items-center justify-between">
+                    <Badge variant={project.badge as 'success' | 'warning'}>
+                      {project.status}
+                    </Badge>
+                    <span className="text-2xl">{project.icon}</span>
+                  </div>
+                  <h2 className="mb-3 text-xl font-bold">{project.title}</h2>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <p className="mt-4 text-sm font-medium text-sky-600">
+                    자세히 보기 →
+                  </p>
+                </Card>
+              </Link>
+            )}
+          </div>
         ))}
       </div>
     </Section>
