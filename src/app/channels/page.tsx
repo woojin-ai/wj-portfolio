@@ -234,7 +234,7 @@ export default function ChannelsPage() {
                 <div className="text-sm text-gray-600 mt-1">제작 영상</div>
               </div>
               <div className="text-center p-4 bg-sky-50 rounded-lg">
-                <div className="text-3xl font-bold text-sky-600">15만</div>
+                <div className="text-3xl font-bold text-sky-600">150만</div>
                 <div className="text-sm text-gray-600 mt-1">단일 콘텐츠 최고 조회수</div>
               </div>
               <div className="text-center p-4 bg-sky-50 rounded-lg">

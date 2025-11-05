@@ -36,7 +36,7 @@ export default function SponsorPage() {
               <ul className="space-y-2 text-gray-700">
                 <li>• 쇼핑 리뷰 채널 2개 운영(유튜브, 인스타그램, 틱톡)</li>
                 <li>• 주 5-7회 정기 업로드</li>
-                <li>• 전체 채널 누적 구독자: 약 2,500명</li>
+                <li>• 전체 채널 누적 구독자: 약 6,000명</li>
                 <li>• 평균 조회수: 500-2,000회/영상</li>
               </ul>
             </div>
