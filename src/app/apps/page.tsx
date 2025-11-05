@@ -182,15 +182,8 @@ export default function AppsPage() {
             <div className="flex items-start gap-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
               <span className="text-2xl">🔄</span>
               <div>
-                <p className="font-bold text-amber-900">플레이스토어 등록 준비중</p>
-                <p className="text-amber-700 text-sm">개발자 계정 생성 및 앱 스크린샷 제작 진행 (2025년 10월 완료 예정)</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
-              <span className="text-2xl">📱</span>
-              <div>
-                <p className="font-bold text-blue-900">iOS 버전 개발 예정</p>
-                <p className="text-blue-700 text-sm">안드로이드 출시 후 App Store 등록 진행 (2025년 11월 목표)</p>
+                <p className="font-bold text-amber-900">구글 플레이 심사 진행중</p>
+                <p className="text-amber-700 text-sm">앱 검토 및 품질 테스트 진행중</p>
               </div>
             </div>
           </div>
