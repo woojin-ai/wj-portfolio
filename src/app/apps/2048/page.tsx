@@ -54,11 +54,24 @@ export default function Game2048Page() {
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <h1 className="text-4xl md:text-5xl font-bold">2048 게임</h1>
-              <Badge variant="success">개발 완료</Badge>
+              <Badge variant="success">출시됨</Badge>
             </div>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-6">
               클래식 2048 퍼즐 게임 - AI 어시스턴트 협업 개발
             </p>
+            {/* 구글 플레이 다운로드 버튼 */}
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.wjco.game2048" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-sky-600 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+            >
+              <span className="text-2xl">📱</span>
+              <div className="text-left">
+                <div className="text-sm opacity-90">Google Play에서</div>
+                <div className="text-lg">앱 다운로드하기</div>
+              </div>
+            </a>
           </div>
 
           {/* 앱 스크린샷 캐러셀 */}
@@ -127,14 +140,24 @@ export default function Game2048Page() {
                 <span className="text-2xl">✅</span>
                 <div>
                   <h3 className="font-semibold">개발 완료</h3>
-                  <p className="text-gray-600">앱 개발 및 테스트 완료, 배포 준비 중</p>
+                  <p className="text-gray-600">앱 개발 및 테스트 완료</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl">⏳</span>
-                <div>
-                  <h3 className="font-semibold">구글 플레이 등록 대기</h3>
-                  <p className="text-gray-600">스토어 정책 검토 및 최종 빌드 준비 중</p>
+                <span className="text-2xl">🚀</span>
+                <div className="flex items-center gap-3">
+                  <div>
+                    <h3 className="font-semibold">구글 플레이 출시</h3>
+                    <p className="text-gray-600">Google Play Store에서 다운로드 가능</p>
+                  </div>
+                  <a 
+                    href="https://play.google.com/store/apps/details?id=com.wjco.game2048" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-sky-500 text-white rounded-lg text-sm font-semibold hover:bg-sky-600 transition-colors whitespace-nowrap"
+                  >
+                    앱 설치하기
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -151,10 +174,10 @@ export default function Game2048Page() {
           <Card>
             <h2 className="text-2xl font-bold mb-4">다음 계획</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
-              <li>구글 플레이 스토어 등록 및 출시</li>
               <li>사용자 피드백 수집 및 개선</li>
               <li>iOS 버전 개발 (App Store 출시)</li>              
               <li>리더보드 및 업적 시스템</li>
+              <li>다양한 게임 모드 추가 (타임 어택, 무한 모드 등)</li>
             </ul>
           </Card>
         </div>

@@ -20,9 +20,10 @@ const apps = [
     title: '2048 게임',
     description: 'React Native로 구현한 클래식 2048 퍼즐 게임. 스와이프 제스처와 스코어 시스템 완비.',
     icon: '🎮',
-    status: '개발 완료',
+    status: '출시됨',
     tech: ['React Native', 'TypeScript', 'Expo'],
     color: 'from-violet-50 to-purple-50',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.wjco.game2048',
   },
   {
     id: 'tarot',
@@ -63,11 +64,11 @@ export default function AppsPage() {
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
           AI-어시스트 개발로 완성한 모바일 앱 4종 <br/>
-          (개발 완료, 구글 플레이 스토어 등록 대기중)
+          (2048 게임 출시, 나머지 3개 앱 등록 대기중)
         </p>
         <div className="flex justify-center gap-4">
-          <Badge variant="success">4개 앱 개발 완료</Badge>
-          <Badge variant="warning">플레이스토어 등록 대기</Badge>
+          <Badge variant="success">2048 게임 출시</Badge>
+          <Badge variant="warning">3개 앱 등록 대기</Badge>
         </div>
       </Section>
 
@@ -75,33 +76,48 @@ export default function AppsPage() {
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {apps.map((app) => (
-            <Link key={app.id} href={`/apps/${app.id}`}>
-              <Card
-                className={`bg-gradient-to-br ${app.color} border-2 border-gray-200 hover:border-sky-400 transition-all cursor-pointer h-full`}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="text-5xl">{app.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2">{app.title}</h3>
-                    <p className="text-gray-600 mb-4">{app.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {app.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+            <div key={app.id}>
+              <Link href={`/apps/${app.id}`}>
+                <Card
+                  className={`bg-gradient-to-br ${app.color} border-2 border-gray-200 hover:border-sky-400 transition-all cursor-pointer h-full`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="text-5xl">{app.icon}</div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold mb-2">{app.title}</h3>
+                      <p className="text-gray-600 mb-4">{app.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {app.tech.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <Badge variant={app.status === '출시됨' ? 'success' : 'success'}>{app.status}</Badge>
                     </div>
-                    <Badge variant="success">{app.status}</Badge>
                   </div>
-                </div>
-                <div className="mt-4 text-sky-600 font-semibold flex items-center gap-2">
-                  자세히 보기 <span>→</span>
-                </div>
-              </Card>
-            </Link>
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="text-sky-600 font-semibold flex items-center gap-2">
+                      자세히 보기 <span>→</span>
+                    </span>
+                    {app.playStoreUrl && (
+                      <a 
+                        href={app.playStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="px-4 py-2 bg-sky-500 text-white rounded-lg text-sm font-semibold hover:bg-sky-600 transition-colors"
+                      >
+                        플레이스토어
+                      </a>
+                    )}
+                  </div>
+                </Card>
+              </Link>
+            </div>
           ))}
         </div>
       </Section>
@@ -179,11 +195,18 @@ export default function AppsPage() {
                 <p className="text-green-700 text-sm">4개 앱 모두 로컬 테스트 및 QA 완료</p>
               </div>
             </div>
+            <div className="flex items-start gap-4 p-4 bg-green-50 rounded-lg border border-green-200">
+              <span className="text-2xl">🚀</span>
+              <div>
+                <p className="font-bold text-green-900">2048 게임 출시</p>
+                <p className="text-green-700 text-sm">구글 플레이 스토어에서 다운로드 가능</p>
+              </div>
+            </div>
             <div className="flex items-start gap-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
               <span className="text-2xl">🔄</span>
               <div>
-                <p className="font-bold text-amber-900">구글 플레이 심사 진행중</p>
-                <p className="text-amber-700 text-sm">앱 검토 및 품질 테스트 진행중</p>
+                <p className="font-bold text-amber-900">나머지 3개 앱 심사 진행중</p>
+                <p className="text-amber-700 text-sm">타로, 사주, MBTI 앱 검토 및 품질 테스트 진행중</p>
               </div>
             </div>
           </div>
