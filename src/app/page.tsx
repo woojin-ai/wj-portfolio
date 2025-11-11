@@ -4,8 +4,8 @@ import Card from '@/components/Card';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI로 효율과 수익을 설계하는 플래너',
-  description: 'AI-어시스트 개발로 자동화·콘텐츠 운영을 시스템화합니다. 비트코인 자동매매, 블로그 자동화, 쇼핑채널 운영, 모바일 앱 개발.',
+  title: '바이브 코딩으로 효율과 수익을 설계하는 플래너',
+  description: 'AI와 대화하며 코드를 생성하고, 설계·검증·운영으로 시스템을 완성합니다. 비트코인 자동매매, 블로그 자동화, 쇼핑채널 운영, 모바일 앱 개발.',
 };
 
 export default function Home() {
@@ -37,12 +37,12 @@ export default function Home() {
       {/* Hero Section */}
       <Section className="py-24 text-center">
         <h1 className="text-5xl font-bold leading-tight md:text-6xl">
-          AI로 효율과 수익을 설계하는
+          바이브 코딩으로 효율과 수익을
           <br />
-          <span className="text-primary">플래너</span>
+          <span className="text-primary">설계하는 플래너</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-600">
-          AI-어시스트 개발로 자동화·콘텐츠 운영을 시스템화합니다.
+          AI와 대화하며 코드를 생성하고, 설계·검증·운영으로 시스템을 완성합니다.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Link
@@ -87,7 +87,7 @@ export default function Home() {
             '@type': 'Person',
             name: 'WJ',
             jobTitle: 'AI 플래너 & 개발자',
-            description: 'AI로 효율과 수익을 설계하는 플래너',
+            description: '바이브 코딩으로 효율과 수익을 설계하는 플래너',
             knowsAbout: ['AI Development', 'Automation', 'Content Creation', 'Trading Bots'],
           }),
         }}
